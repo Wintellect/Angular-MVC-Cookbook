@@ -1,0 +1,4 @@
+*.suo
+*.user
+BasicProject/MvcAngular.Web/bin/
+BasicProject/MvcAngular.Web/obj/
