@@ -131,6 +131,9 @@
     <Content Include="Content\bootstrap\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap\bootstrap.css" />
     <Content Include="Content\bootstrap\bootstrap.min.css" />
+    <Content Include="Content\font-awesome\font-awesome.css" />
+    <Content Include="Content\font-awesome\font-awesome.min.css" />
+    <Content Include="Content\font\fontawesome-webfont.svg" />
     <Content Include="Content\img\glyphicons-halflings-white.png" />
     <Content Include="Content\img\glyphicons-halflings.png" />
     <Content Include="Global.asax" />
@@ -166,6 +169,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Bootstrap.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\font\fontawesome-webfont.eot" />
+    <Content Include="Content\font\fontawesome-webfont.ttf" />
+    <Content Include="Content\font\fontawesome-webfont.woff" />
+    <Content Include="Content\font\FontAwesome.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

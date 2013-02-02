@@ -15,6 +15,7 @@ namespace MvcAngular.Web
 
             bundles.Add(new StyleBundle("~/Content/css-two")
                 .Include("~/Content/bootstrap/bootstrap-responsive.css")
+                .Include("~/Content/font-awesome/font-awesome.css")
                 .Include("~/Content/app/main.css"));
 
 
