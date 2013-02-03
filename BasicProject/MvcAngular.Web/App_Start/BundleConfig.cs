@@ -8,12 +8,15 @@ namespace MvcAngular.Web
         // For more information on Bundling, visit http://go.microsoft.com/fwlink/?LinkId=254725
         public static void RegisterBundles(BundleCollection bundles)
         {
+            // Use Bundle rather than StyleBundle or ScriptBundle in order to turn off
+            // minification (takes the already minified files).
+
             // CSS Bundles
 
-            bundles.Add(new StyleBundle("~/Content/css-one")
+            bundles.Add(new Bundle("~/Content/files/css-one")
                 .Include("~/Content/bootstrap/bootstrap.css"));
 
-            bundles.Add(new StyleBundle("~/Content/css-two")
+            bundles.Add(new Bundle("~/Content/files/css-two")
                 .Include("~/Content/bootstrap/bootstrap-responsive.css")
                 .Include("~/Content/font-awesome/font-awesome.css")
                 .Include("~/Content/app/main.css"));
@@ -21,10 +24,10 @@ namespace MvcAngular.Web
 
             // Script Bundles
 
-            bundles.Add(new ScriptBundle("~/bundles/modernizr")
+            bundles.Add(new Bundle("~/bundles/files/modernizr")
                 .Include("~/Scripts/bootstrap/modernizr-2.6.2-respond-1.1.0.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/scripts")
+            bundles.Add(new Bundle("~/bundles/files/scripts")
                 .Include("~/Scripts/jquery/jquery-{version}.js")
                 .Include("~/Scripts/bootstrap/bootstrap.js")
                 .Include("~/Scripts/angular/angular.js"));

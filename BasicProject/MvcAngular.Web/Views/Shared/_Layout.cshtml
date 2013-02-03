@@ -10,15 +10,15 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
-        @Styles.Render("~/Content/css-one")
+        @Styles.Render("~/Content/files/css-one")
         <style>
             body {
                 padding-top: 60px;
                 padding-bottom: 40px;
             }
         </style>
-        @Styles.Render("~/Content/css-two")
-        @Scripts.Render("~/bundles/modernizr")
+        @Styles.Render("~/Content/files/css-two")
+        @Scripts.Render("~/bundles/files/modernizr")
 
     </head>
     <body>
@@ -28,7 +28,7 @@
 
         @RenderBody()
 
-        @Scripts.Render("~/bundles/scripts")
+        @Scripts.Render("~/bundles/files/scripts")
         @RenderSection("scripts", required: false)
 
 @*
