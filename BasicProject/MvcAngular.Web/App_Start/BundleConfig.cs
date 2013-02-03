@@ -26,7 +26,8 @@ namespace MvcAngular.Web
 
             bundles.Add(new ScriptBundle("~/bundles/scripts")
                 .Include("~/Scripts/jquery/jquery-{version}.js")
-                .Include("~/Scripts/bootstrap/bootstrap.js"));
+                .Include("~/Scripts/bootstrap/bootstrap.js")
+                .Include("~/Scripts/angular/angular.js"));
         }
     }
 }
