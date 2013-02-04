@@ -1,11 +1,11 @@
-#Basic MVC/AngularJS Web Project
+#Basic AngularJS/MVC Web Project
 ##Basic ASP.NET MVC project to build AngularJS examples with
 
-Part of the MVC/AngularJS Cookbook found at
-http://dfbaskin.github.com/
+Part of the AngularJS/MVC Cookbook found at
+https://github.com/Wintellect/Angular-MVC-Cookbook
 
 ##License
-- MVC/AngularJS Cookbook - http://opensource.org/licenses/mit-license.html
+- AngularJS/MVC Cookbook - http://opensource.org/licenses/mit-license.html
 - Twitter Bootstrap - http://www.apache.org/licenses/LICENSE-2.0
 - jQuery - http://opensource.org/licenses/mit-license.html
 - Modernizr - http://opensource.org/licenses/mit-license.html
