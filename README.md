@@ -11,8 +11,9 @@ and other components. Other examples build upon this.
 - [Simple Routing](./SimpleRouting) - example of simple routing of dynamic views.
 
 ##Blog Posts (Newest First)
-- [AngularJS/MVC Cookbook Basic Project](http://blog.dfbaskin.com/2013/02/cookbook-for-aspnet-mvc-and-angularjs.html)
-- [Cookbook for ASP.NET MVC and Angular.js Web Apps](http://blog.dfbaskin.com/2013/02/angularjsmvc-cookbook-basic-project.html)
+- [AngularJS/MVC Cookbook Simple Routing](http://blog.dfbaskin.com/2013/02/angularjsmvc-cookbook-simple-routing.html)
+- [AngularJS/MVC Cookbook Basic Project](http://blog.dfbaskin.com/2013/02/angularjsmvc-cookbook-basic-project.html)
+- [Cookbook for ASP.NET MVC and Angular.js Web Apps](http://blog.dfbaskin.com/2013/02/cookbook-for-aspnet-mvc-and-angularjs.html)
 
 ##License
 - AngularJS/MVC Cookbook - http://opensource.org/licenses/mit-license.html
