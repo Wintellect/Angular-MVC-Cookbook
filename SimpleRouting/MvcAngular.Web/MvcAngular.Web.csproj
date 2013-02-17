@@ -120,6 +120,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TestsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -318,6 +319,13 @@
     <Content Include="Scripts\bootstrap\modernizr-2.6.2-respond-1.1.0.min.js" />
     <Content Include="Scripts\jquery\jquery-1.9.0.js" />
     <Content Include="Scripts\jquery\jquery-1.9.0.min.js" />
+    <Content Include="Scripts\testing\config\testacular-integration-tests.conf.js" />
+    <Content Include="Scripts\testing\config\testacular-unit-tests.conf.js" />
+    <Content Include="Scripts\testing\jasmine\jasmine-html.js" />
+    <Content Include="Scripts\testing\jasmine\jasmine.css" />
+    <Content Include="Scripts\testing\jasmine\jasmine.js" />
+    <Content Include="Scripts\testing\unit-tests\basicSpec.js" />
+    <Content Include="Scripts\testing\unit-tests\controllersSpec.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -334,6 +342,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Scripts\testing\integration-tests\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -355,6 +364,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Contact.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Tests\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

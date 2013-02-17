@@ -1,0 +1,58 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Jasmine Spec Runner</title>
+
+  <link rel="stylesheet" type="text/css" href="@Url.Content("~/Scripts/testing/jasmine/jasmine.css")" />
+  <script type="text/javascript" src="@Url.Content("~/Scripts/testing/jasmine/jasmine.js")"></script>
+  <script type="text/javascript" src="@Url.Content("~/Scripts/testing/jasmine/jasmine-html.js")"></script>
+
+  <!-- include source files here... -->
+  <script type="text/javascript" src="@Url.Content("~/Scripts/angular/angular.js")"></script>
+  <script type="text/javascript" src="@Url.Content("~/Scripts/angular/angular-mocks.js")"></script>
+  <script type="text/javascript" src="@Url.Content("~/Scripts/app/home/homeModule.js")"></script>
+  <script type="text/javascript" src="@Url.Content("~/Scripts/app/home/homeCtrl.js")"></script>
+  <script type="text/javascript" src="@Url.Content("~/Scripts/app/home/contactCtrl.js")"></script>
+  <script type="text/javascript" src="@Url.Content("~/Scripts/app/home/aboutCtrl.js")"></script>
+
+  <!-- include spec files here... -->
+  <script type="text/javascript" src="@Url.Content("~/Scripts/testing/unit-tests/basicSpec.js")"></script>
+  <script type="text/javascript" src="@Url.Content("~/Scripts/testing/unit-tests/controllersSpec.js")"></script>
+
+  <script type="text/javascript">
+    (function() {
+      var jasmineEnv = jasmine.getEnv();
+      jasmineEnv.updateInterval = 1000;
+
+      var htmlReporter = new jasmine.HtmlReporter();
+
+      jasmineEnv.addReporter(htmlReporter);
+
+      jasmineEnv.specFilter = function(spec) {
+        return htmlReporter.specFilter(spec);
+      };
+
+      var currentWindowOnload = window.onload;
+
+      window.onload = function() {
+        if (currentWindowOnload) {
+          currentWindowOnload();
+        }
+        execJasmine();
+      };
+
+      function execJasmine() {
+        jasmineEnv.execute();
+      }
+
+    })();
+  </script>
+
+</head>
+
+<body>
+</body>
+</html>
