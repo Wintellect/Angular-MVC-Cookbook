@@ -319,7 +319,6 @@
     <Content Include="Scripts\bootstrap\modernizr-2.6.2-respond-1.1.0.min.js" />
     <Content Include="Scripts\jquery\jquery-1.9.0.js" />
     <Content Include="Scripts\jquery\jquery-1.9.0.min.js" />
-    <Content Include="Scripts\testing\config\testacular-integration-tests.conf.js" />
     <Content Include="Scripts\testing\config\testacular-unit-tests.conf.js" />
     <Content Include="Scripts\testing\jasmine\jasmine-html.js" />
     <Content Include="Scripts\testing\jasmine\jasmine.css" />
@@ -342,7 +341,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Scripts\testing\integration-tests\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
