@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>elmah.corelibrary</id>
+    <version>1.2.2</version>
+    <title>ELMAH Core Library (no config)</title>
+    <authors>Atif Aziz</authors>
+    <owners>Atif Aziz</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>http://elmah.googlecode.com/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Core library for ELMAH (Error Logging Modules and Handlers) without any configuration.</description>
+    <summary>Core library for ELMAH (Error Logging Modules and Handlers) without any configuration.</summary>
+    <releaseNotes>This release fixes the issues listed here: http://code.google.com/p/elmah/issues/list?q=label%3AMilestone-Release1.2SP2&amp;can=1</releaseNotes>
+    <tags>elmah error logging unhandled exception</tags>
+    <references>
+      <reference file="Elmah.dll" />
+    </references>
+  </metadata>
+</package>
