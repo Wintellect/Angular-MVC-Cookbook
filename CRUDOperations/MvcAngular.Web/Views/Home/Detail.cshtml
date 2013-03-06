@@ -1,0 +1,94 @@
+﻿
+<div class="container">
+
+    <form name="personForm" class="ng-cloak">
+        <fieldset>
+      
+            <legend>Person Details</legend>
+            
+            <div class="row-fluid">
+        
+                <div class="control-group">
+                    <label class="control-label" for="title">Title</label>
+                    <div class="controls row-fluid">
+                        <input type="text" name="title" data-ng-model="person.title" class="span3" readonly />
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="firstName">First Name</label>
+                    <div class="controls row-fluid">
+                        <input type="text" name="firstName" data-ng-model="person.firstName" class="span8" readonly />
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="middleName">Middle Name</label>
+                    <div class="controls row-fluid">
+                        <input type="text" name="middleName" data-ng-model="person.middleName" class="span7" readonly />
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="lastName">Last Name</label>
+                    <div class="controls row-fluid">
+                        <input type="text" name="lastName" data-ng-model="person.lastName" class="span8" readonly />
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="suffix">Suffix</label>
+                    <div class="controls row-fluid">
+                        <input type="text" name="suffix" data-ng-model="person.suffix" class="span3" readonly />
+                    </div>
+                </div>
+
+                <div class="row-fluid">
+                    <div class="span4">
+                        <p>Postal Address(es)</p>
+                        <ul>
+                            <li ng-repeat="postalAddr in person.postalAddresses">
+                                {{postalAddr.lineOne}} <br />
+                                {{postalAddr.lineTwo}} <br />
+                                {{postalAddr.city}} <br />
+                                {{postalAddr.stateProvince}} <br />
+                                {{postalAddr.postalCode}}
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="span4">
+                        <p>Phone Number(s)</p>
+                        <ul>
+                            <li ng-repeat="phone in person.phoneNumbers">
+                                {{phone.number}} ({{phone.numberType}})
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="span4">
+                        <p>Email Address(es)</p>
+                        <ul>
+                            <li ng-repeat="email in person.emailAddresses">
+                                {{email.address}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="controls row-fluid">
+                    &nbsp;
+                </div>
+
+                <div class="control-group">
+                    <div class="controls row-fluid">
+                        <div class="span12">
+                            <button class="btn" data-ng-click="returnToList()"><i class="icon-remove-sign"></i> Return to List</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </fieldset>
+    </form>        
+
+</div>

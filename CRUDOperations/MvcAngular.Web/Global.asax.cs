@@ -22,11 +22,9 @@ namespace MvcAngular.Web
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            FilterConfig.RegisterGlobalFilters(GlobalConfiguration.Configuration.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-
-            //Database.SetInitializer(new DropCreateDatabaseIfModelChanges<ExampleDbContext>());
-            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<ExampleDbContext, MvcAngular.Web.Migrations.Configuration>());
         }
     }
 }

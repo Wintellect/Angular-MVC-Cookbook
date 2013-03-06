@@ -1,0 +1,26 @@
+﻿
+<div class="container">
+    <h4>People</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Title</th>
+                <th>First</th>
+                <th>Middle</th>
+                <th>Last</th>
+                <th>Suffix</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="person in people">
+                <td><a ng-click="viewPerson(person.personId)"><i class="icon-edit"></i></a></td>
+                <td>{{person.title}}</td>
+                <td>{{person.firstName}}</td>
+                <td>{{person.middleName}}</td>
+                <td>{{person.lastName}}</td>
+                <td>{{person.suffix}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

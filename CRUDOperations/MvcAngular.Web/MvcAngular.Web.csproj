@@ -128,6 +128,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\PeopleController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -143,6 +144,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\ExampleDataRepository.cs" />
     <Compile Include="Repository\PostalAddress.cs" />
     <Compile Include="Repository\EmailAddress.cs" />
     <Compile Include="Repository\PhoneNumber.cs" />
@@ -336,9 +338,8 @@
     <Content Include="Scripts\angular\i18n\angular-locale_zh-hk.js" />
     <Content Include="Scripts\angular\i18n\angular-locale_zh-tw.js" />
     <Content Include="Scripts\angular\i18n\angular-locale_zh.js" />
-    <Content Include="Scripts\app\home\aboutCtrl.js" />
-    <Content Include="Scripts\app\home\contactCtrl.js" />
-    <Content Include="Scripts\app\home\homeCtrl.js" />
+    <Content Include="Scripts\app\home\detailCtrl.js" />
+    <Content Include="Scripts\app\home\listCtrl.js" />
     <Content Include="Scripts\app\home\homeModule.js" />
     <Content Include="Scripts\bootstrap\bootstrap.js" />
     <Content Include="Scripts\bootstrap\bootstrap.min.js" />
@@ -399,13 +400,10 @@
     <Content Include="Content\font\FontAwesome.otf" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\Home.cshtml" />
+    <Content Include="Views\Home\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\About.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Tests\Index.cshtml" />

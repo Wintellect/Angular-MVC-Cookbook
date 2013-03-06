@@ -13,17 +13,12 @@ namespace MvcAngular.Web.Controllers
             return View();
         }
 
-        public ActionResult Home()
+        public ActionResult List()
         {
             return PartialView();
         }
 
-        public ActionResult About()
-        {
-            return PartialView();
-        }
-
-        public ActionResult Contact()
+        public ActionResult Detail()
         {
             return PartialView();
         }
