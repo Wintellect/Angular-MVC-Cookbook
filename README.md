@@ -12,6 +12,7 @@ and other components. Other examples build upon this.
 controllers.
 
 ##Blog Posts (Newest First)
+- [AngularJS/MVC Cookbook CRUD Operations](http://blog.dfbaskin.com/2013/03/angularjsmvc-cookbook-crud-operations.html)
 - [AngularJS/MVC Cookbook Running Unit Tests](http://blog.dfbaskin.com/2013/02/angularjsmvc-cookbook-running-unit-tests.html)
 - [AngularJS/MVC Cookbook Unit Testing](http://blog.dfbaskin.com/2013/02/angularjsmvc-cookbook-unit-testing.html)
 - [AngularJS/MVC Cookbook Simple Routing](http://blog.dfbaskin.com/2013/02/angularjsmvc-cookbook-simple-routing.html)
