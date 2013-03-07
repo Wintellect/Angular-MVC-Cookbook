@@ -10,6 +10,7 @@ https://github.com/Wintellect/Angular-MVC-Cookbook
 and other components. Other examples build upon this.
 - [Simple Routing](./SimpleRouting) - example of simple routing of dynamic views and unit testing
 controllers.
+- [CRUD Operations](./CRUDOperations) - example of CRUD operations.
 
 ##Blog Posts (Newest First)
 - [AngularJS/MVC Cookbook CRUD Operations](http://blog.dfbaskin.com/2013/03/angularjsmvc-cookbook-crud-operations.html)
