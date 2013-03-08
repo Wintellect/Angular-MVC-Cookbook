@@ -27,5 +27,6 @@ controllers.
 - Email: dbaskin@wintellect.com
 
 ##Changelog
+- v1.2 - added CRUD Operations example.
 - v1.1 - added Simple Routing example.
 - v1.0 - initial version.

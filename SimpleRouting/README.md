@@ -11,5 +11,6 @@ https://github.com/Wintellect/Angular-MVC-Cookbook
 - Email: dbaskin@wintellect.com
 
 ##Changelog
+- v1.2.0 - upgraded to AngularJS 1.1.3
 - v1.1.0 - added Jasmine unit tests.
 - v1.0.0 - initial version.

@@ -11,4 +11,5 @@ https://github.com/Wintellect/Angular-MVC-Cookbook
 - Email: dbaskin@wintellect.com
 
 ##Changelog
+- v1.1.0 - upgraded to AngularJS v1.1.3.
 - v1.0.0 - initial version.
