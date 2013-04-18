@@ -13,6 +13,7 @@ controllers.
 - [CRUD Operations](./CRUDOperations) - example of CRUD operations.
 
 ##Blog Posts (Newest First)
+- [AngularJS/MVC Cookbook Simple Binding](http://blog.dfbaskin.com/2013/03/angularjsmvc-cookbook-simple-binding.html)
 - [AngularJS/MVC Cookbook CRUD Operations](http://blog.dfbaskin.com/2013/03/angularjsmvc-cookbook-crud-operations.html)
 - [AngularJS/MVC Cookbook Running Unit Tests](http://blog.dfbaskin.com/2013/02/angularjsmvc-cookbook-running-unit-tests.html)
 - [AngularJS/MVC Cookbook Unit Testing](http://blog.dfbaskin.com/2013/02/angularjsmvc-cookbook-unit-testing.html)
@@ -27,6 +28,7 @@ controllers.
 - Email: dbaskin@wintellect.com
 
 ##Changelog
+- v1.3 - upgraded projects to AngularJS v1.1.4.
 - v1.2 - added CRUD Operations example.
 - v1.1 - added Simple Routing example.
 - v1.0 - initial version.
