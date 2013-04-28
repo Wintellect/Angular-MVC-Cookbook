@@ -1,4 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net;
+using System.Net.Http;
+using System.Text;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
@@ -6,6 +12,8 @@ using System.Web.Http;
 using System.Web.Http.Filters;
 using System.Web.Mvc;
 using Elmah;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using IExceptionFilter = System.Web.Http.Filters.IExceptionFilter;
 
 namespace MvcAngular.Web
@@ -21,23 +29,73 @@ namespace MvcAngular.Web
 
         public static void RegisterGlobalFilters(HttpFilterCollection filters)
         {
-            filters.Add(new WebApiErrorHandler());
+            filters.Add(new WebApiErrorFilter());
         }
 
-        private class WebApiErrorHandler : System.Web.Http.Filters.ExceptionFilterAttribute
+        private class WebApiErrorFilter : IExceptionFilter
         {
-            public override void OnException(HttpActionExecutedContext actionExecutedContext)
+            public bool AllowMultiple
             {
-                base.OnException(actionExecutedContext);
+                get { return true; }
+            }
 
+            public Task ExecuteExceptionFilterAsync(HttpActionExecutedContext actionExecutedContext, CancellationToken cancellationToken)
+            {
+                var statusCode = HttpStatusCode.InternalServerError;
+                var responseObject = new JObject();
+                dynamic responseData = responseObject;
                 var ex = actionExecutedContext.Exception;
+
+                responseData.message = ex.Message;
+                AddDiagnosticInformation(ex, responseObject);
+
+                string jsonText = JsonConvert.SerializeObject(responseData, WebApiConfig.JsonSerializerSettings);
+                var httpContent = new StringContent(jsonText, Encoding.UTF8);
+                httpContent.Headers.ContentType =
+                    new System.Net.Http.Headers.MediaTypeHeaderValue("application/json")
+                    {
+                        CharSet = "utf-8"
+                    };
+
+                var httpResponse =
+                    new HttpResponseMessage
+                    {
+                        StatusCode = statusCode,
+                        Content = httpContent,
+                    };
+
+                actionExecutedContext.Response = httpResponse;
+
                 var httpContext = HttpContext.Current;
-                if (httpContext != null && (RaiseErrorSignal(ex, httpContext) || IsFiltered(ex, httpContext)))
+                if (!(httpContext != null && (RaiseErrorSignal(ex, httpContext) || IsFiltered(ex, httpContext))))
                 {
-                    return;
+                    LogException(ex, httpContext);
                 }
 
-                LogException(ex, httpContext);
+                return Task.FromResult(false);
+            }
+
+            [Conditional("DEBUG")]
+            private void AddDiagnosticInformation(Exception ex, JObject responseObject)
+            {
+                dynamic responseData = responseObject;
+                var exLst = new List<Exception>();
+                for (var x = ex; x != null; x = x.InnerException)
+                {
+                    exLst.Add(x);
+                }
+                responseData.Exceptions = new JArray(
+                    exLst
+                        .Select(
+                            x =>
+                            JObject.FromObject(
+                                new
+                                    {
+                                        errorType = x.GetType().FullName,
+                                        message = x.Message,
+                                    }))
+                        .ToList());
+                responseData.StackTrace = ex.StackTrace;
             }
         }
 
@@ -54,12 +112,10 @@ namespace MvcAngular.Web
 
                 var ex = context.Exception;
                 var httpContext = context.HttpContext.ApplicationInstance.Context;
-                if (httpContext != null && (RaiseErrorSignal(ex, httpContext) || IsFiltered(ex, httpContext)))
+                if (!(httpContext != null && (RaiseErrorSignal(ex, httpContext) || IsFiltered(ex, httpContext))))
                 {
-                    return;
+                    LogException(ex, httpContext);
                 }
-
-                LogException(ex, httpContext);
             }
         }
 

@@ -1,4 +1,16 @@
 ﻿
+<style>
+
+    tr a {
+        opacity: 0.2;
+    }
+
+    tr:hover a {
+        opacity: 1.0;
+    }
+    
+</style>
+
 <div class="container">
     
     <div class="row-fluid">
@@ -6,20 +18,30 @@
     </div>
     
     <div class="row-fluid">
+        <div class="span12">
+            <a class="btn btn-link" ng-click="createPerson()"><i class="icon-plus-sign"></i> Add Person</a>
+        </div>
+    </div>
+    
+    <div class="row-fluid">
         <table class="table table-condensed table-hover">
             <thead>
                 <tr>
-                    <th class="span1">&nbsp;</th>
+                    <th class="span2">&nbsp;</th>
                     <th class="span1">Title</th>
                     <th class="span3">First</th>
-                    <th class="span3">Middle</th>
+                    <th class="span2">Middle</th>
                     <th class="span3">Last</th>
                     <th class="span1">Suffix</th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="person in people">
-                    <td><a ng-click="viewPerson(person.personId)"><i class="icon-edit"></i></a></td>
+                    <td class="input-append">
+                        <a class="btn btn-link" ng-click="viewPerson(person.personId)"><i class="icon-eye-open"></i></a>
+                        <a class="btn btn-link" ng-click="editPerson(person.personId)"><i class="icon-edit"></i></a>
+                        <a class="btn btn-link" ng-click="deletePerson(person.personId)"><i class="icon-trash"></i></a>
+                    </td>
                     <td>{{person.title}}</td>
                     <td>{{person.firstName}}</td>
                     <td>{{person.middleName}}</td>

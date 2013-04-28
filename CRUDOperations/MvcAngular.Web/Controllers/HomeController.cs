@@ -22,5 +22,10 @@ namespace MvcAngular.Web.Controllers
         {
             return PartialView();
         }
+
+        public ActionResult Edit()
+        {
+            return PartialView();
+        }
     }
 }

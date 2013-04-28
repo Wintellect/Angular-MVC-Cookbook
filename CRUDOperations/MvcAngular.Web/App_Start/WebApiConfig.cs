@@ -10,6 +10,8 @@ namespace MvcAngular.Web
 {
     public static class WebApiConfig
     {
+        public static JsonSerializerSettings JsonSerializerSettings { get; private set; }
+
         public static void Register(HttpConfiguration config)
         {
             config.Routes.MapHttpRoute(
@@ -19,18 +21,19 @@ namespace MvcAngular.Web
             );
 
             // Set camelCase JSON serialization as default.
+            WebApiConfig.JsonSerializerSettings =
+                new JsonSerializerSettings
+                    {
+                        ContractResolver = new CamelCasePropertyNamesContractResolver(),
+                        ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore,
+#if DEBUG
+                        Formatting = Formatting.Indented,
+#endif
+                    };
             var index = config.Formatters.IndexOf(config.Formatters.JsonFormatter);
             config.Formatters[index] = new JsonMediaTypeFormatter
                 {
-                    SerializerSettings =
-                        new JsonSerializerSettings
-                            {
-                                ContractResolver = new CamelCasePropertyNamesContractResolver(),
-                                ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore,
-#if DEBUG
-                                Formatting = Formatting.Indented,
-#endif
-                            }
+                    SerializerSettings = WebApiConfig.JsonSerializerSettings
                 };
         }
     }

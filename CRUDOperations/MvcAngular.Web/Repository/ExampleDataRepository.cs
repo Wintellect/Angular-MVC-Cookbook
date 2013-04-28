@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Data.Entity;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace MvcAngular.Web.Repository
             }
         }
 
-        public Person GetPerson(int personId)
+        public Person ReadPerson(int personId)
         {
             using (var ctx = new ExampleDbContext())
             {
@@ -28,6 +29,40 @@ namespace MvcAngular.Web.Repository
                         .Include(p => p.PhoneNumbers)
                         .AsNoTracking()
                         .SingleOrDefault(p => p.PersonId == personId);
+            }
+        }
+
+        public void CreatePerson(Person person)
+        {
+            using (var ctx = new ExampleDbContext())
+            {
+                ctx.People.Add(person);
+                ctx.SaveChanges();
+            }
+        }
+
+        public void UpdatePerson(Person person)
+        {
+            using (var ctx = new ExampleDbContext())
+            {
+                ctx.People.Attach(person);
+                ctx.Entry(person).State = EntityState.Modified;
+                ctx.SaveChanges();
+            }
+        }
+
+        public void DeletePerson(int personId)
+        {
+            using (var ctx = new ExampleDbContext())
+            {
+                var person = ctx.People.SingleOrDefault(p => p.PersonId == personId);
+                if (person == null)
+                {
+                    throw new ObjectNotFoundException("Invalid person id.");
+                }
+
+                ctx.People.Remove(person);
+                ctx.SaveChanges();
             }
         }
     }

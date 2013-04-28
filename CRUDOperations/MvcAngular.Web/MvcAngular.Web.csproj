@@ -338,9 +338,11 @@
     <Content Include="Scripts\angular\i18n\angular-locale_zh-hk.js" />
     <Content Include="Scripts\angular\i18n\angular-locale_zh-tw.js" />
     <Content Include="Scripts\angular\i18n\angular-locale_zh.js" />
+    <Content Include="Scripts\app\home\editCtrl.js" />
     <Content Include="Scripts\app\home\detailCtrl.js" />
     <Content Include="Scripts\app\home\listCtrl.js" />
     <Content Include="Scripts\app\home\homeModule.js" />
+    <Content Include="Scripts\app\home\peopleService.js" />
     <Content Include="Scripts\bootstrap\bootstrap.js" />
     <Content Include="Scripts\bootstrap\bootstrap.min.js" />
     <Content Include="Scripts\bootstrap\modernizr-2.6.2-respond-1.1.0.js" />
@@ -365,6 +367,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Edit.cshtml" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
