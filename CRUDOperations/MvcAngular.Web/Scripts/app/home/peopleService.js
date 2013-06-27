@@ -1,6 +1,6 @@
 ﻿
 angular
-    .module('myApp.service.people', ['ngResource'])
+    .module('myApp.service.people', [])
     .factory('peopleService', [
         '$http',
         function($http) {

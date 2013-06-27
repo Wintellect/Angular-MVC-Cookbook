@@ -1,10 +1,14 @@
 ﻿
 angular
     .module('myApp', [
+        'ngSanitize',
         'myApp.ctrl.list',
         'myApp.ctrl.detail',
         'myApp.ctrl.edit',
-        'myApp.service.people'
+        'myApp.service.people',
+        'myApp.filters.address',
+        'myApp.filters.microDataAddress',
+        'myApp.directives.microDataAddress'
     ])
     .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 

@@ -1,0 +1,40 @@
+﻿
+<div class="row-fluid">
+    <div class="span12">
+        <h5>Postal Address(es)</h5>
+        <ul>
+            <li ng-repeat="postalAddr in person.postalAddresses">
+                {{postalAddr.lineOne}} <br />
+                {{postalAddr.lineTwo}} <br />
+                {{postalAddr.city}}, {{postalAddr.stateProvince}} {{postalAddr.postalCode}}
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="span12">
+        <h5>Phone Number(s)</h5>
+        <ul>
+            <li ng-repeat="phone in person.phoneNumbers">
+                {{phone.number}} ({{phone.numberType}})
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="span12">
+        <h5>Email Address(es)</h5>
+        <ul>
+            <li ng-repeat="email in person.emailAddresses">
+                {{email.address}}
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+@*{{postalAddr | address}}*@
+@*<span ng-bind-html="postalAddr | address"></span>*@
+@*<span ng-bind-html="postalAddr | microdataaddress"></span>*@
+@*<span ng-bind-html-unsafe="postalAddr | microdataaddress"></span>*@
+@*<micro-data-address value="postalAddr"></micro-data-address>*@

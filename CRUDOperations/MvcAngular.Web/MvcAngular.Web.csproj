@@ -338,6 +338,9 @@
     <Content Include="Scripts\angular\i18n\angular-locale_zh-hk.js" />
     <Content Include="Scripts\angular\i18n\angular-locale_zh-tw.js" />
     <Content Include="Scripts\angular\i18n\angular-locale_zh.js" />
+    <Content Include="Scripts\app\home\addressFilter.js" />
+    <Content Include="Scripts\app\home\microDataAddressDirective.js" />
+    <Content Include="Scripts\app\home\microDataAddressFilter.js" />
     <Content Include="Scripts\app\home\editCtrl.js" />
     <Content Include="Scripts\app\home\detailCtrl.js" />
     <Content Include="Scripts\app\home\listCtrl.js" />
@@ -368,6 +371,10 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Edit.cshtml" />
+    <Content Include="Views\Home\EditEmail.cshtml" />
+    <Content Include="Views\Home\EditPhone.cshtml" />
+    <Content Include="Views\Home\EditAddress.cshtml" />
+    <Content Include="Views\Home\ContactInfoList.cshtml" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />

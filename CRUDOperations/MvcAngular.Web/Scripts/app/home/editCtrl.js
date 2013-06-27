@@ -5,8 +5,16 @@ angular
         '$scope',
         '$routeParams',
         '$location',
+        '$templateCache',
         'peopleService',
-        function($scope, $routeParams, $location, peopleService) {
+        function($scope, $routeParams, $location, $templateCache, peopleService) {
+
+            var editTemplates = {
+                'list': '/Home/ContactInfoList',
+                'postal': '/Home/EditAddress',
+                'phone': '/Home/EditPhone',
+                'email': '/Home/EditEmail'
+            };
 
             $scope.person = {
                 title: '',
@@ -19,6 +27,12 @@ angular
             $scope.returnToList = function() {
                 $location.path("/");
             };
+
+            $scope.panelId = 'list';
+            $scope.contactInfoPanelUrl = editTemplates[$scope.panelId];
+            $scope.$watch('panelId', function(panelId) {
+                $scope.contactInfoPanelUrl = editTemplates[panelId];
+            });
 
             $scope.save = function () {
                 

@@ -27,5 +27,25 @@ namespace MvcAngular.Web.Controllers
         {
             return PartialView();
         }
+
+        public ActionResult ContactInfoList()
+        {
+            return PartialView();
+        }
+
+        public ActionResult EditAddress()
+        {
+            return PartialView();
+        }
+
+        public ActionResult EditPhone()
+        {
+            return PartialView();
+        }
+
+        public ActionResult EditEmail()
+        {
+            return PartialView();
+        }
     }
 }
