@@ -1,0 +1,64 @@
+﻿@{
+    Layout = "~/Views/Shared/_AltLayout.cshtml";
+    ViewBag.Title = "JQuery Form";
+}
+
+<div class="container">
+    
+    <form name="personForm">
+        <fieldset>
+      
+            <legend>Details</legend>
+            
+            <div id="firstNameGroup" class="control-group">
+                <label class="control-label" for="firstName">First Name</label>
+                <div class="controls">
+                    <input type="text" name="firstName" class="span6" required maxlength="40" />
+                    <span class="help-inline err-req">First name is required.</span>
+                </div>
+            </div>
+
+            <div id="lastNameGroup" class="control-group">
+                <label class="control-label" for="lastName">Last Name</label>
+                <div class="controls">
+                    <input type="text" name="lastName" class="span6" required maxlength="50" />
+                    <span class="help-inline err-req">Last name is required.</span>
+                </div>
+            </div>
+
+            <div id="emailAddressGroup" class="control-group">
+                <label class="control-label" for="emailAddress">Email Address</label>
+                <div class="controls">
+                    <input type="email" name="emailAddress" class="span8" required />
+                    <span class="help-inline err-req">Email Address is required.</span>
+                    <span class="help-inline err-valid">Email address is not in a valid form.</span>
+                </div>
+            </div>
+
+        </fieldset>
+
+        <div class="control-group">
+            
+            <div class="controls">
+                <div class="span8">
+                    <span class="pull-right">
+                        <button id="cancelButton" class="btn btn-link">
+                            <i class="icon-remove"></i> Cancel
+                        </button>
+                        <button id="okButton" class="btn">
+                            <i class="icon-save"></i> Save
+                        </button>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+
+</div>
+
+@section scripts
+{
+    <script src="@Url.Content("~/Scripts/app/examples/validationUsingJQuery.js")" type="text/javascript"></script>
+}

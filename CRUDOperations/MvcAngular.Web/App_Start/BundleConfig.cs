@@ -31,6 +31,10 @@ namespace MvcAngular.Web
                 .Include("~/Scripts/jquery/jquery-{version}.js")
                 .Include("~/Scripts/bootstrap/bootstrap.js")
                 .Include("~/Scripts/angular/angular.js"));
+
+            bundles.Add(new Bundle("~/bundles/files/alt-scripts")
+                .Include("~/Scripts/jquery/jquery-{version}.js")
+                .Include("~/Scripts/bootstrap/bootstrap.js"));
         }
     }
 }

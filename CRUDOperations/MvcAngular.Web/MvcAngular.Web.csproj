@@ -133,6 +133,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ExamplesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TestsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -338,6 +339,7 @@
     <Content Include="Scripts\angular\i18n\angular-locale_zh-hk.js" />
     <Content Include="Scripts\angular\i18n\angular-locale_zh-tw.js" />
     <Content Include="Scripts\angular\i18n\angular-locale_zh.js" />
+    <Content Include="Scripts\app\examples\validationUsingJQuery.js" />
     <Content Include="Scripts\app\home\addressFilter.js" />
     <Content Include="Scripts\app\home\microDataAddressDirective.js" />
     <Content Include="Scripts\app\home\microDataAddressFilter.js" />
@@ -375,6 +377,8 @@
     <Content Include="Views\Home\EditPhone.cshtml" />
     <Content Include="Views\Home\EditAddress.cshtml" />
     <Content Include="Views\Home\ContactInfoList.cshtml" />
+    <Content Include="Views\Examples\JQueryForm.cshtml" />
+    <Content Include="Views\Shared\_AltLayout.cshtml" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
