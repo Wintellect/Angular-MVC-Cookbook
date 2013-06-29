@@ -4,9 +4,12 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
+using System.Web.Http.ModelBinding;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using MvcAngular.Web.Models;
+using MvcAngular.Web.Models.Binders;
 using MvcAngular.Web.Repository;
 
 namespace MvcAngular.Web
@@ -25,6 +28,8 @@ namespace MvcAngular.Web
             FilterConfig.RegisterGlobalFilters(GlobalConfiguration.Configuration.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            GlobalConfiguration.Configuration.Services.Insert(typeof(ModelBinderProvider), 0, new CustomModelBinderProvider());
         }
     }
 }

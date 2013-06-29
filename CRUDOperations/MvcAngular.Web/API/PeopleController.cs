@@ -4,16 +4,20 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.ModelBinding;
+using MvcAngular.Web.Models;
+using MvcAngular.Web.Models.Binders;
 using MvcAngular.Web.Repository;
 
 namespace MvcAngular.Web.API
 {
     public class PeopleController : ApiController
     {
-        public IEnumerable<Person> Get()
+        public PersonResponse Get([ModelBinder] PeopleRequest model)
         {
+            model = model ?? new PeopleRequest();
             var repository = new ExampleDataRepository();
-            return repository.GetSomePeople();
+            return repository.GetPeople(model);
         }
 
         public Person Get(int id)

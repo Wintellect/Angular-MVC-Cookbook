@@ -144,6 +144,10 @@
       <DependentUpon>201303032041565_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Binders\CustomModelBinderProvider.cs" />
+    <Compile Include="Models\Binders\PeopleRequestBinder.cs" />
+    <Compile Include="Models\PeopleResponse.cs" />
+    <Compile Include="Models\PeopleRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\ExampleDataRepository.cs" />
     <Compile Include="Repository\PostalAddress.cs" />
@@ -166,6 +170,25 @@
     <Content Include="Content\font\fontawesome-webfont.svg" />
     <Content Include="Content\img\glyphicons-halflings-white.png" />
     <Content Include="Content\img\glyphicons-halflings.png" />
+    <Content Include="Content\jqgrid\ellipsis-xbl.xml" />
+    <Content Include="Content\jqgrid\ui.jqgrid.css" />
+    <Content Include="Content\overcast\images\animated-overlay.gif" />
+    <Content Include="Content\overcast\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\overcast\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="Content\overcast\images\ui-bg_flat_55_c0402a_40x100.png" />
+    <Content Include="Content\overcast\images\ui-bg_flat_55_eeeeee_40x100.png" />
+    <Content Include="Content\overcast\images\ui-bg_glass_100_f8f8f8_1x400.png" />
+    <Content Include="Content\overcast\images\ui-bg_glass_35_dddddd_1x400.png" />
+    <Content Include="Content\overcast\images\ui-bg_glass_60_eeeeee_1x400.png" />
+    <Content Include="Content\overcast\images\ui-bg_inset-hard_75_999999_1x100.png" />
+    <Content Include="Content\overcast\images\ui-bg_inset-soft_50_c9c9c9_1x100.png" />
+    <Content Include="Content\overcast\images\ui-icons_3383bb_256x240.png" />
+    <Content Include="Content\overcast\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\overcast\images\ui-icons_70b2e1_256x240.png" />
+    <Content Include="Content\overcast\images\ui-icons_999999_256x240.png" />
+    <Content Include="Content\overcast\images\ui-icons_fbc856_256x240.png" />
+    <Content Include="Content\overcast\jquery-ui-1.10.3.custom.css" />
+    <Content Include="Content\overcast\jquery-ui-1.10.3.custom.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Repository\People.xml" />
     <Content Include="Scripts\angular\angular-bootstrap-prettify.js" />
@@ -176,6 +199,8 @@
     <Content Include="Scripts\angular\angular-cookies.min.js" />
     <Content Include="Scripts\angular\angular-loader.js" />
     <Content Include="Scripts\angular\angular-loader.min.js" />
+    <Content Include="Scripts\angular\angular-mobile.js" />
+    <Content Include="Scripts\angular\angular-mobile.min.js" />
     <Content Include="Scripts\angular\angular-mocks.js" />
     <Content Include="Scripts\angular\angular-resource.js" />
     <Content Include="Scripts\angular\angular-resource.min.js" />
@@ -339,6 +364,7 @@
     <Content Include="Scripts\angular\i18n\angular-locale_zh-hk.js" />
     <Content Include="Scripts\angular\i18n\angular-locale_zh-tw.js" />
     <Content Include="Scripts\angular\i18n\angular-locale_zh.js" />
+    <Content Include="Scripts\app\examples\jqGridExample.js" />
     <Content Include="Scripts\app\examples\validationUsingJQuery.js" />
     <Content Include="Scripts\app\home\addressFilter.js" />
     <Content Include="Scripts\app\home\microDataAddressDirective.js" />
@@ -352,8 +378,64 @@
     <Content Include="Scripts\bootstrap\bootstrap.min.js" />
     <Content Include="Scripts\bootstrap\modernizr-2.6.2-respond-1.1.0.js" />
     <Content Include="Scripts\bootstrap\modernizr-2.6.2-respond-1.1.0.min.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-ar.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-bg.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-bg1251.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-cat.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-cn.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-cs.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-da.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-de.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-dk.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-el.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-en.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-es.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-fa.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-fi.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-fr.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-gl.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-he.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-hr.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-hr1250.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-hu.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-id.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-is.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-it.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-ja.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-kr.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-lt.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-mne.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-nl.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-no.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-pl.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-pt-br.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-pt.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-ro.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-ru.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-sk.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-sr-latin.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-sr.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-sv.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-th.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-tr.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-tw.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-ua.js" />
+    <Content Include="Scripts\jqgrid\i18n\grid.locale-vi.js" />
+    <Content Include="Scripts\jqgrid\jquery.jqGrid.min.js" />
+    <Content Include="Scripts\jqgrid\jquery.jqGrid.src.js" />
+    <Content Include="Scripts\jqgrid\plugins\grid.addons.js" />
+    <Content Include="Scripts\jqgrid\plugins\grid.postext.js" />
+    <Content Include="Scripts\jqgrid\plugins\grid.setcolumns.js" />
+    <Content Include="Scripts\jqgrid\plugins\jquery.contextmenu.js" />
+    <Content Include="Scripts\jqgrid\plugins\jquery.searchFilter.js" />
+    <Content Include="Scripts\jqgrid\plugins\jquery.tablednd.js" />
+    <Content Include="Scripts\jqgrid\plugins\searchFilter.css" />
+    <Content Include="Scripts\jqgrid\plugins\ui.multiselect.css" />
+    <Content Include="Scripts\jqgrid\plugins\ui.multiselect.js" />
     <Content Include="Scripts\jquery\jquery-1.9.0.js" />
     <Content Include="Scripts\jquery\jquery-1.9.0.min.js" />
+    <Content Include="Scripts\jquery\jquery-ui-1.10.3.custom.js" />
+    <Content Include="Scripts\jquery\jquery-ui-1.10.3.custom.min.js" />
     <Content Include="Scripts\testing\config\testacular-unit-tests.conf.js" />
     <Content Include="Scripts\testing\jasmine\jasmine-html.js" />
     <Content Include="Scripts\testing\jasmine\jasmine.css" />
@@ -379,6 +461,7 @@
     <Content Include="Views\Home\ContactInfoList.cshtml" />
     <Content Include="Views\Examples\JQueryForm.cshtml" />
     <Content Include="Views\Shared\_AltLayout.cshtml" />
+    <Content Include="Views\Examples\JQGrid.cshtml" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
@@ -398,7 +481,6 @@
     <None Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
     <Folder Include="Scripts\testing\unit-tests\" />
   </ItemGroup>
   <ItemGroup>

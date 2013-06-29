@@ -12,5 +12,10 @@ namespace MvcAngular.Web.Controllers
         {
             return View();
         }
+
+        public ActionResult JQGrid()
+        {
+            return View();
+        }
     }
 }
