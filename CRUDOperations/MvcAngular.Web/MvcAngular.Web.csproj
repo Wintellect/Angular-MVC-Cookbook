@@ -367,6 +367,8 @@
     <Content Include="Scripts\app\examples\jqGridExample.js" />
     <Content Include="Scripts\app\examples\validationUsingJQuery.js" />
     <Content Include="Scripts\app\home\addressFilter.js" />
+    <Content Include="Scripts\app\home\gridCtrl.js" />
+    <Content Include="Scripts\app\home\jqGridDirective.js" />
     <Content Include="Scripts\app\home\microDataAddressDirective.js" />
     <Content Include="Scripts\app\home\microDataAddressFilter.js" />
     <Content Include="Scripts\app\home\editCtrl.js" />
@@ -462,6 +464,7 @@
     <Content Include="Views\Examples\JQueryForm.cshtml" />
     <Content Include="Views\Shared\_AltLayout.cshtml" />
     <Content Include="Views\Examples\JQGrid.cshtml" />
+    <Content Include="Views\Home\Grid.cshtml" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />

@@ -1,0 +1,24 @@
+﻿
+<div class="container">
+    
+    <div class="row-fluid">
+        <h4>People</h4>
+    </div>
+    
+    <div class="row-fluid">
+        <div class="span12">
+            <a class="btn btn-link" ng-click="createPerson()"><i class="icon-plus-sign"></i> Add Person</a>
+        </div>
+    </div>
+    
+    <div class="row-fluid">
+        <jq-grid>
+            <jq-grid-column name="lastName" width="200" label="Last" />
+            <jq-grid-column name="firstName" width="200" label="First" />
+            <jq-grid-column name="middleName" width="100" label="Middle" />
+            <jq-grid-column name="suffix" width="100" label="Suffix" />
+            <jq-grid-column name="title" width="100" label="Title" />
+        </jq-grid>
+    </div>
+
+</div>

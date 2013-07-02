@@ -1,7 +1,7 @@
 ﻿
 angular
-    .module('myApp.ctrl.list', [])
-    .controller('listCtrl', [
+    .module('myApp.ctrl.grid', [])
+    .controller('gridCtrl', [
         '$scope',
         '$location',
         'peopleService',
@@ -21,10 +21,10 @@ angular
                 $location.path("/create");
             };
 
-            peopleService
-                .getPeople()
-                .success(function(data, status, headers, config) {
-                    $scope.people = data.rows;
-                });
+            //peopleService
+            //    .getPeople()
+            //    .success(function(data, status, headers, config) {
+            //        $scope.people = data.rows;
+            //    });
 
         }]);

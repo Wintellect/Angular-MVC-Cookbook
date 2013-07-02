@@ -18,6 +18,11 @@ namespace MvcAngular.Web.Controllers
             return PartialView();
         }
 
+        public ActionResult Grid()
+        {
+            return PartialView();
+        }
+
         public ActionResult Detail()
         {
             return PartialView();

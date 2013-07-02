@@ -8,13 +8,19 @@ angular
         'myApp.service.people',
         'myApp.filters.address',
         'myApp.filters.microDataAddress',
-        'myApp.directives.microDataAddress'
+        'myApp.directives.microDataAddress',
+        'myApp.directives.jqGrid',
+        'myApp.ctrl.grid'
     ])
     .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
         $routeProvider.when('/', {
             templateUrl: '/Home/List',
             controller: 'listCtrl'
+        });
+        $routeProvider.when('/grid', {
+            templateUrl: '/Home/Grid',
+            controller: 'gridCtrl'
         });
         $routeProvider.when('/detail/:id', {
             templateUrl: '/Home/Detail',

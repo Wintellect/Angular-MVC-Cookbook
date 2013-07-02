@@ -2,6 +2,9 @@
     ViewBag.Title = "Home";
 }
 
+<link rel="stylesheet" type="text/css" media="screen" href="@Url.Content("~/Content/overcast/jquery-ui-1.10.3.custom.css")" />
+<link rel="stylesheet" type="text/css" media="screen" href="@Url.Content("~/Content/jqgrid/ui.jqgrid.css")" />
+
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
@@ -13,9 +16,20 @@
             <a class="brand" href="/">CRUD Operations</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
-                    <li class="active"><a href="#!/">Home</a></li>
+                    <li><a href="#!/">List</a></li>
+                    <li><a href="#!/grid">Grid</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Examples
+                            <b class="caret"></b>
+                          </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/examples/jqueryform">jQuery Form</a></li>
+                            <li><a href="/examples/jqgrid">jQuery Grid</a></li>
+                        </ul>
+                    </li>                    
                 </ul>
-            </div><!--/.nav-collapse -->
+            </div>
         </div>
     </div>
 </div>
@@ -42,4 +56,9 @@
     <script src="@Url.Content("~/Scripts/app/home/addressFilter.js")" type="text/javascript"></script>
     <script src="@Url.Content("~/Scripts/app/home/microDataAddressFilter.js")" type="text/javascript"></script>
     <script src="@Url.Content("~/Scripts/app/home/microDataAddressDirective.js")" type="text/javascript"></script>
+
+    <script src="@Url.Content("~/Scripts/jqgrid/i18n/grid.locale-en.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jqgrid/jquery.jqGrid.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/app/home/jqGridDirective.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/app/home/gridCtrl.js")" type="text/javascript"></script>
 }

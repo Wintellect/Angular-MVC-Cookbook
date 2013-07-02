@@ -5,19 +5,12 @@ $(function () {
         url: '/api/people',
         datatype: 'json',
         mtype: 'GET',
-        colNames: [
-            "Last",
-            "First",
-            "Middle",
-            "Suffix",
-            "Title"
-        ],
         colModel: [
-            { name: "lastName", width: 200 },
-            { name: "firstName", width: 200 },
-            { name: "middleName", width: 100 },
-            { name: "suffix", width: 100 },
-            { name: "title", width: 100 }
+            { name: "lastName", width: 200, label: 'Last' },
+            { name: "firstName", width: 200, label: 'First' },
+            { name: "middleName", width: 100, label: 'Middle' },
+            { name: "suffix", width: 100, label: 'Suffix' },
+            { name: "title", width: 100, label: 'Title' }
         ],
         pager: "#dataGridPager",
         autowidth: true,
