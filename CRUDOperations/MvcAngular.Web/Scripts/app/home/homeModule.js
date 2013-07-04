@@ -10,6 +10,7 @@ angular
         'myApp.filters.microDataAddress',
         'myApp.directives.microDataAddress',
         'myApp.directives.jqGrid',
+        'myApp.directives.jqTemplateGrid',
         'myApp.ctrl.grid'
     ])
     .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
@@ -18,8 +19,12 @@ angular
             templateUrl: '/Home/List',
             controller: 'listCtrl'
         });
-        $routeProvider.when('/grid', {
-            templateUrl: '/Home/Grid',
+        $routeProvider.when('/grid-one', {
+            templateUrl: '/Home/Grid1',
+            controller: 'gridCtrl'
+        });
+        $routeProvider.when('/grid-two', {
+            templateUrl: '/Home/Grid2',
             controller: 'gridCtrl'
         });
         $routeProvider.when('/detail/:id', {
