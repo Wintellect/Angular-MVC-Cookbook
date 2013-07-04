@@ -4,10 +4,9 @@ angular
     .controller('editCtrl', [
         '$scope',
         '$routeParams',
-        '$location',
         '$templateCache',
         'peopleService',
-        function($scope, $routeParams, $location, $templateCache, peopleService) {
+        function($scope, $routeParams, $templateCache, peopleService) {
 
             var editTemplates = {
                 'list': '/Home/ContactInfoList',
@@ -25,7 +24,7 @@ angular
             };
 
             $scope.returnToList = function() {
-                $location.path("/");
+                $scope.navigationManager.goToListPage();
             };
 
             $scope.panelId = 'list';
@@ -40,7 +39,7 @@ angular
                     peopleService
                         .createPerson($scope.person)
                         .success(function(data, status, headers, config) {
-                            $location.path("/");
+                            $scope.navigationManager.goToListPage();
                         })
                         .error(function(data, status, headers, config) {
                             $scope.errorMessage = (data || { message: "Create operation failed." }).message + (' [HTTP-' + status + ']');
@@ -49,7 +48,7 @@ angular
                     peopleService
                         .updatePerson($scope.person)
                         .success(function (data, status, headers, config) {
-                            $location.path("/");
+                            $scope.navigationManager.goToListPage();
                         })
                         .error(function (data, status, headers, config) {
                             $scope.errorMessage = (data || { message: "Update operation failed." }).message + (' [HTTP-' + status + ']');

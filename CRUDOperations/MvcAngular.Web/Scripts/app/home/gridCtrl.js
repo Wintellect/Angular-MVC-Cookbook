@@ -9,6 +9,8 @@ angular
             $scope.createPerson = function() {
                 $location.path("/create");
             };
+            
+            $scope.navigationManager.setListPage();
 
         }])
     .controller('gridRowCtrl', [

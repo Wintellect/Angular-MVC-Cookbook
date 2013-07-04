@@ -2,6 +2,7 @@
 angular
     .module('myApp', [
         'ngSanitize',
+        'myApp.ctrl.home',
         'myApp.ctrl.list',
         'myApp.ctrl.detail',
         'myApp.ctrl.edit',

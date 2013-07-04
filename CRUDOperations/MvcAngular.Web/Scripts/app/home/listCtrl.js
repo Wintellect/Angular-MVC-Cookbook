@@ -27,4 +27,6 @@ angular
                     $scope.people = data.rows;
                 });
 
+            $scope.navigationManager.setListPage();
+
         }]);

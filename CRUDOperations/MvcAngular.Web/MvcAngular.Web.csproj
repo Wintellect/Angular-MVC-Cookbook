@@ -367,6 +367,7 @@
     <Content Include="Scripts\app\examples\jqGridExample.js" />
     <Content Include="Scripts\app\examples\validationUsingJQuery.js" />
     <Content Include="Scripts\app\home\addressFilter.js" />
+    <Content Include="Scripts\app\home\homeCtrl.js" />
     <Content Include="Scripts\app\home\jqTemplateGridDirective.js" />
     <Content Include="Scripts\app\home\gridCtrl.js" />
     <Content Include="Scripts\app\home\jqGridDirective.js" />

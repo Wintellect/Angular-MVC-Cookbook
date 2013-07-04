@@ -5,9 +5,8 @@ angular
         '$scope',
         '$routeParams',
         '$route',
-        '$location',
         'peopleService',
-        function($scope, $routeParams, $route, $location, peopleService) {
+        function($scope, $routeParams, $route, peopleService) {
 
             $scope.person = {
                 title: '',
@@ -19,15 +18,15 @@ angular
 
             $scope.isDeleteRequested = !!$route.current.isDeleteRequested;
 
-            $scope.returnToList = function() {
-                $location.path("/");
+            $scope.returnToList = function () {
+                $scope.navigationManager.goToListPage();
             };
 
             $scope.deletePerson = function () {
                 peopleService
                     .deletePerson($routeParams.id)
                     .success(function(data, status, headers, config) {
-                        $location.path("/");
+                        $scope.navigationManager.goToListPage();
                     })
                     .error(function (data, status, headers, config) {
                         $scope.errorMessage = (data || { message: "Delete operation failed." }).message + (' [HTTP-' + status + ']');
