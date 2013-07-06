@@ -39,6 +39,13 @@ angular
                     '</span>'
                 ].join('');
                 
+                output += [
+                    br,
+                    '<span itemprop="addressCountry">',
+                    addr.country,
+                    '</span>'
+                ].join('');
+                
                 output = [
                     '<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">',
                     output,

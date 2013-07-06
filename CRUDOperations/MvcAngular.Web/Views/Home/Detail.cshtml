@@ -50,11 +50,18 @@
                             <li ng-repeat="postalAddr in person.postalAddresses">
                                 {{postalAddr.lineOne}} <br />
                                 {{postalAddr.lineTwo}} <br />
-                                {{postalAddr.city}} <br />
-                                {{postalAddr.stateProvince}} <br />
-                                {{postalAddr.postalCode}}
+                                {{postalAddr.city}}, {{postalAddr.stateProvince}} {{postalAddr.postalCode}} <br />
+                                {{postalAddr.country}}
                             </li>
                         </ul>
+                        
+@*{{postalAddr.lineOne | uppercase}}*@
+@*{{postalAddr | address}}*@
+@*<span ng-bind-html="postalAddr | address"></span>*@
+@*<span ng-bind-html="postalAddr | microdataaddress"></span>*@
+@*<span ng-bind-html-unsafe="postalAddr | microdataaddress"></span>*@
+@*<micro-data-address value="postalAddr"></micro-data-address>*@
+
                     </div>
                     <div class="span4">
                         <p>Phone Number(s)</p>

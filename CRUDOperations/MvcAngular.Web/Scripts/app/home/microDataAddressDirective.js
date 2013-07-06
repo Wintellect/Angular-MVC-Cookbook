@@ -50,6 +50,12 @@ angular
                                 .element('<span itemprop="postalCode"></span>')
                                 .text(addr.postalCode)
                                 .appendTo(parent);
+                            
+                            parent.append('<br />');
+                            angular
+                                .element('<span itemprop="addressCountry"></span>')
+                                .text(addr.country)
+                                .appendTo(parent);
                         }
                     });
                 }

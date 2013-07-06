@@ -20,6 +20,7 @@ angular
                     ' ',
                     addr.postalCode
                 ].join('');
+                output += br + addr.country;
                 return output;
             };
         }]);
