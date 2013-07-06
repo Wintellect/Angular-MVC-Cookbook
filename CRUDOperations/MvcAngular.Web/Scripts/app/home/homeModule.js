@@ -50,6 +50,7 @@ angular
         });
 
         // Specify HTML5 mode (using the History APIs) or HashBang syntax.
-        $locationProvider.html5Mode(false).hashPrefix('!');
+        $locationProvider.html5Mode(true);
+        //$locationProvider.html5Mode(false).hashPrefix('!');
 
     }]);
