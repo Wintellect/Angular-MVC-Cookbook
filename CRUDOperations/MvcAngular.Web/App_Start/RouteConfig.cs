@@ -17,7 +17,7 @@ namespace MvcAngular.Web
                 name: "spa-routes",
                 url: "{route}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
-                constraints: new { route = @"^(create|edit|delete|detail)$" }
+                constraints: new { route = @"^(create|edit|delete|detail|grid-two)$" }
             );
 
             routes.MapRoute(

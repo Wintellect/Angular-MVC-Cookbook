@@ -54,18 +54,22 @@ angular.module('myApp.directives.jqTemplateGrid', [])
 
                             var count = data.rows.length,
                                 trList = grid.find("tr.jqgrow"),
-                                tr, idx, rowScope, ctrl;
+                                tr, idx, rowScope, ctrl, lnk;
                             
                             for (idx = 0; idx < count; idx += 1) {
 
+                                tr = $(trList[idx]);
+                                lnk = $compile(tr.contents());
+                                
                                 rowScope = scope.$new();
                                 rowScope.data = data.rows[idx];
                                 ctrl = $controller('gridRowCtrl', {
                                     $scope: rowScope
                                 });
-                                tr = $(trList[idx]);
                                 tr.data('$ngControllerController', ctrl);
-                                $compile(tr.contents())(rowScope);
+                                lnk(rowScope);
+                                
+                                // TODO: call $destroy() on rowScope when finished to address memory leak.
                             }
                         }
                     });

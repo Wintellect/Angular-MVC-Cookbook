@@ -47,15 +47,7 @@ angular.module('myApp.directives.jqGrid', [])
                         viewrecords: true,
                         gridview: true,
                         autoencode: true,
-                        caption: "jQuery Grid using AngularJS Directive",
-                        gridComplete: function (e) {
-                            console.log('Grid Complete');
-                            console.log(e);
-                        },
-                        loadComplete: function (e) {
-                            console.log('Load Complete');
-                            console.log(e);
-                        }
+                        caption: "jQuery Grid using AngularJS Directive"
                     });
                 }
             };
