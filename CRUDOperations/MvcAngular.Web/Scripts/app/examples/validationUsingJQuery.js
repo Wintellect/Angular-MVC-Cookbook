@@ -12,14 +12,14 @@ $(function () {
                 return this.isEmailAddressNameValid && this.isLastNameValid && this.isEmailAddressValid;
             },
             isDirty: false,
-            isEmailAddressNameValid: true,
+            isFirstNameValid: true,
             isLastNameValid: true,
             isEmailAddressValid: true
         };
 
     $('#firstNameGroup input')
         .bind('change keyup input', function (e) {
-            updateEmailAddressName($(this).val());
+            updateFirstName($(this).val());
         });
     
     $('#lastNameGroup input')
@@ -46,19 +46,19 @@ $(function () {
 
     copyOriginalPerson();
 
-    function updateEmailAddressName(value) {
+    function updateFirstName(value) {
         if (person.firstName !== value) {
             formState.isDirty = true;
         }
         person.firstName = value;
         if (value.match(/^\s*$/)) {
             $('#firstNameGroup .err-req').show();
-            formState.isEmailAddressNameValid = false;
+            formState.isFirstNameValid = false;
         } else {
             $('#firstNameGroup .err-req').hide();
-            formState.isEmailAddressNameValid = true;
+            formState.isFirstNameValid = true;
         }
-        if (formState.isEmailAddressNameValid) {
+        if (formState.isFirstNameValid) {
             $('#firstNameGroup').removeClass('error');
         } else {
             $('#firstNameGroup').addClass('error');
