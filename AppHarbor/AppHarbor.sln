@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcAngular.Web", "..\BasicProject\MvcAngular.Web\MvcAngular.Web.csproj", "{507C33AC-A1BD-47AC-9D66-6F65B004C0DD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcAngular.Web", "..\SimpleRouting\MvcAngular.Web\MvcAngular.Web.csproj", "{507C33AC-A1BD-47AC-9D66-6F65B004C0DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
