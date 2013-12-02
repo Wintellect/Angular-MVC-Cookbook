@@ -34,7 +34,9 @@
 //
 // Config file generated at "/Users/vojta/Code/karma/my.conf.js".
 
+// http://karma-runner.github.io
 // Karma configuration
+
 module.exports = function (config) {
 	config.set({
 
@@ -69,8 +71,8 @@ module.exports = function (config) {
 		// (other than progress) require an additional library to be installed (via NPM).
 		// https://github.com/karma-runner/karma-junit-reporter 
 		junitReporter: {
-			outputFile: 'test_out/test-result.xml',
-			suite: 'unit-tests'
+			outputFile: 'test_out/unit.xml',
+			suite: 'unit'
 		},
 
 		// web server port
