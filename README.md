@@ -1,7 +1,13 @@
 #Angular-MVC-Cookbook
+[![Maintenance](https://img.shields.io/maintenance/no/2016.svg)]()
+
+> This project is no longer maintained.  Please see projects at
+> [https://github.com/ng-cookbook](https://github.com/ng-cookbook) for
+> current examples.
+
 ##Angular.js and ASP.NET MVC Cookbook.
 
-This repository contains examples of integrating [Angular.js](http://angularjs.org/) 
+This repository contains examples of integrating [Angular.js](http://angularjs.org/)
 and [ASP.NET MVC](http://www.asp.net/mvc). The AngularJS/MVC Cookbook found at GitHub at
 https://github.com/Wintellect/Angular-MVC-Cookbook
 
