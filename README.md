@@ -19,13 +19,13 @@ controllers.
 - [CRUD Operations](./CRUDOperations) - example of CRUD operations.
 
 ##Blog Posts (Newest First)
-- [AngularJS/MVC Cookbook Simple Binding](http://blog.dfbaskin.com/2013/03/angularjsmvc-cookbook-simple-binding.html)
-- [AngularJS/MVC Cookbook CRUD Operations](http://blog.dfbaskin.com/2013/03/angularjsmvc-cookbook-crud-operations.html)
-- [AngularJS/MVC Cookbook Running Unit Tests](http://blog.dfbaskin.com/2013/02/angularjsmvc-cookbook-running-unit-tests.html)
-- [AngularJS/MVC Cookbook Unit Testing](http://blog.dfbaskin.com/2013/02/angularjsmvc-cookbook-unit-testing.html)
-- [AngularJS/MVC Cookbook Simple Routing](http://blog.dfbaskin.com/2013/02/angularjsmvc-cookbook-simple-routing.html)
-- [AngularJS/MVC Cookbook Basic Project](http://blog.dfbaskin.com/2013/02/angularjsmvc-cookbook-basic-project.html)
-- [Cookbook for ASP.NET MVC and Angular.js Web Apps](http://blog.dfbaskin.com/2013/02/cookbook-for-aspnet-mvc-and-angularjs.html)
+- [AngularJS/MVC Cookbook Simple Binding](http://devcenter.wintellect.com/dbaskin/angularjs-mvc-cookbook-simple-binding)
+- [AngularJS/MVC Cookbook CRUD Operations](http://devcenter.wintellect.com/dbaskin/angularjs-mvc-cookbook-crud-operations)
+- [AngularJS/MVC Cookbook Running Unit Tests](http://devcenter.wintellect.com/dbaskin/angularjs-mvc-cookbook-running-unit-tests)
+- [AngularJS/MVC Cookbook Unit Testing](http://devcenter.wintellect.com/dbaskin/angularjs-mvc-cookbook-unit-testing)
+- [AngularJS/MVC Cookbook Simple Routing](http://devcenter.wintellect.com/dbaskin/angularjs-mvc-cookbook-simple-routing)
+- [AngularJS/MVC Cookbook Basic Project](http://devcenter.wintellect.com/dbaskin/angularjs-mvc-cookbook-basic-project)
+- [Cookbook for ASP.NET MVC and Angular.js Web Apps](http://devcenter.wintellect.com/dbaskin/cookbook-for-asp-net-mvc-and-angular-js-web-apps)
 
 ##License
 - AngularJS/MVC Cookbook - http://opensource.org/licenses/mit-license.html
